@@ -15,9 +15,12 @@ from robot_dict import robot_dict as robot_dict
 from long_term_memory import update_long_term_memory
 
 # ROBOT 
-    
-platform = 'pioneer_pi_random'
-simulation = False
+# select the platform from the robot dictionary    
+platform = 'pioneer_pi'
+# the pioneer and other robots have different ros topic names
+# with this you can select the correct one
+simulation = True
+# this sets the mode for the memory
 mode = 'long_term_memory'
 
 # Constants
@@ -77,16 +80,7 @@ def main_DQPID(load):
         next_state = robot.update(action, Q_arrange[Q_index].depth)
 
         reward = robot.get_gaussian_reward(next_state,set_point)
-        #previous_Q_index = Q_index
-        # save external stuff
-        '''
-        if x == 200:
-            set_point = np.array([-0.41, 0.31]) 
-            robot.set_point = set_point
-        if x == 400:
-            set_point = np.array([0.21, 0.11]) 
-            robot.set_point = set_point
-        '''
+       
         if x < N_mariano:
              Q_arrange[Q_index] = algorithm_2(Q_arrange[Q_index],state_index,next_state,reward,action_index, flag_ab)
              next_Q_index = Q_index
@@ -95,7 +89,7 @@ def main_DQPID(load):
         else:
             memory.compare()
             if memory.flag_no_variation == True:
-                print('algorithm 4')
+                #print('algorithm 4')
                 Q_arrangement, Q_index, next_Q_index, action_selector.e_greed_counter = algorithm_4(Q_arrange,memory.Mt,next_state,reward,maximum_depth,action_discretization_n,action_selector.e_greed_counter,set_point, flag_ab, K_step)
                 memory.flag_no_variation = False
             else:

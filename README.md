@@ -52,8 +52,16 @@ http://www.clearpathrobotics.com/assets/guides/husky/HuskyMove.html
 
 and then launch with 
 ```
-roslaunch husky_gazebo husky_playpen.launch
+roslaunch husky_gazebo husky_empty_world.launch
 ```
+
+set 
+```
+platform = 'husky_pi_random'
+```
+on main.py
+
+
 
 ### Quadrotor: 
 

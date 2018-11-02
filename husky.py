@@ -108,7 +108,6 @@ class husky_pi():
 
 
 
-
     def wrapToPi(self, angles):
         
         if angles > np.pi:
@@ -116,8 +115,6 @@ class husky_pi():
         elif angles < -np.pi:
             angles = angles + 2*np.pi
         return angles 
-
-
 
 
 
@@ -149,8 +146,10 @@ class husky_pi():
         
         self.euler = [ self.wrapToPi(_) for _ in euler_original] 
         
-        self.velocity = np.array([vx, wz])
-
+        #self.velocity = np.array([vx, wz])
+        a = 0.9*self.velocity[0] + 0.1*vx
+        b = 0.9*self.velocity[1] + 0.1*wz
+        self.velocity = np.array([a, b])
 
     def stop(self):
         self.msg.linear.x = 0.
