@@ -1,8 +1,14 @@
 # Duble QPID
 
-also known as DQPID
+The algorithm is also known as DQPID. From the article:  
 
-This branch does velocity control of the mobile.
+"Double Q-learning algorithm for mobile robot control"
+
+Version submitted to Expert Systems with Applications (under review).
+
+Authors: Ignacio Carlucho - Mariano De Paula - Gerardo Acosta 
+
+
 
 ## Requirements: 
 
@@ -44,6 +50,13 @@ roslaunch amr_robots_gazebo example-pioneer3at-terrainworld.launch
 ```
 Source: https://github.com/MobileRobots/amr-ros-config
 
+Once the gazebo simulation is running you can then execute the algorithm by running: 
+
+```
+python main.py
+```
+
+
 ### Husky 
 
 
@@ -59,7 +72,11 @@ set
 ```
 platform = 'husky_pi_random'
 ```
-on main.py
+on main.py and then you can run the algorithm by doing:   
+
+```
+python main.py
+```
 
 
 
@@ -85,39 +102,7 @@ https://gym.openai.com/docs/
 Sorry this model is not available for the general domain. 
 
 
-## Operating on the pioneer3at platform: 
 
-In your coputer, connect to pioneer: 
-```
-ssh pioneer@192.168.0.27
-```
-then launch everything: 
+## References: 
 
-```
-cd bin
-./enPioneer_Pausado
-
-```
-Wait. and then you can check that everything is working by running some ros command, ie:
-
-```
-rostopic list
-``` 
-
-then open another terminal in your computer, and export the ROS variables, to connect with the master running on pioneer
-
-```
-export ROS_MASTER_URI=http://192.168.0.27:11311
-export ROS_IP=your_computer_ip
-```
-
-After that you are ready to run the algorithm
-
-```
-python main.py
-```
-
-if during operations you press the button, you can reactive motors by using
-```
-rosservice set /RosAria/enable_motors
-```
+- **Incremental Q-learning strategy for adaptive PID control of mobile robots** Carlucho et al. [Link](https://www.sciencedirect.com/science/article/pii/S0957417417301513)
