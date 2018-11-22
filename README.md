@@ -42,19 +42,21 @@ In main.py there is a variable called platform. By assigning to this variable th
 Into the catkin workspace clone 
 
 ```
-git clone https://github.com/MobileRobots/amr-ros-config
+git clone https://github.com/IgnacioCarlucho/amr-ros-config
 ```
 then you can launch an example scenery as: 
 ```
 roslaunch amr_robots_gazebo example-pioneer3at-terrainworld.launch
 ```
-Source: https://github.com/MobileRobots/amr-ros-config
+
 
 Once the gazebo simulation is running you can then execute the algorithm by running: 
 
 ```
 python main.py
 ```
+
+This simulation is speed up for doing easier trials, they can be slowed down using gazebo. 
 
 
 ### Husky 

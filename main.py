@@ -25,7 +25,7 @@ mode = 'long_term_memory'
 
 # Constants
 E_GREED = 1.
-EXECUTION_TIME = 200
+EXECUTION_TIME = 400
 Ts = 10.
 Teval = 1. 
 N_mariano = 8
