@@ -1,6 +1,6 @@
 import numpy as np
 # custom files
-from robots import pioneer, pioneer_pi
+from robots import pioneer_pi
 from gym_robot import gym_pendulum
 from husky import husky_pi
 from drone import drone_pi
