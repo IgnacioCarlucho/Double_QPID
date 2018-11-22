@@ -46,7 +46,8 @@ git clone https://github.com/IgnacioCarlucho/amr-ros-config
 ```
 then you can launch an example scenery as: 
 ```
-roslaunch amr_robots_gazebo example-pioneer3at-terrainworld.launch
+roslaunch amr_robots_gazebo empty_world.launch 
+
 ```
 
 
