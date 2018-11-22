@@ -30,7 +30,9 @@ Authors: Ignacio Carlucho - Mariano De Paula - Gerardo Acosta
 python main.py
 ```
 
-In main.py there is a variable called platform. By assigning to this variable the available robots in the robot dictionary, the algorithm will run it accordingly, with the parameters configured in the dictionary. 
+In main.py there is a variable called platform. By assigning to this variable the available robots in the robot dictionary, the algorithm will run it accordingly, 
+with the parameters configured in the dictionary.   
+By default it is set in 'pioneer_pi' wich is configured for running the pioneer robot in a simulated environment using gazebo. 
 
 
 
@@ -57,7 +59,7 @@ Once the gazebo simulation is running you can then execute the algorithm by runn
 python main.py
 ```
 
-This simulation is speed up for doing easier trials, they can be slowed down using gazebo. 
+This simulation is speed up for doing faster trials, they can be slowed down using gazebo. 
 
 
 ### Husky 

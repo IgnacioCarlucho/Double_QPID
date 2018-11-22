@@ -9,10 +9,7 @@ from drone import drone_pi
 
 robot_dict = {
 
-    'GYM_original' : {'class': gym_pendulum, 'set_point': np.zeros(1), 'action_centroid': np.array([35., 35.]), 'initial_state': np.array([[0.]]),'K_step': 5.,'comentarios': 'para el paper'},
-    
-    'GYM' : {'class': gym_pendulum, 'set_point': np.zeros(1), 'action_centroid': np.array([50., 50.]), 'initial_state': np.array([[0.]]),'K_step': 5.,'comentarios': 'para el paper'},
-    
+       
     'pioneer_pi' : {'class': pioneer_pi, 'set_point': np.array([0.21,0.21]), 'action_centroid': np.array([0.5, 0.51, 0.5, 0.51]), 'initial_state': np.array([[0., 0.]]),'K_step': 0.3, 'comentarios': 'para el paper'},
 
     'pioneer_pi_random' : {'class': pioneer_pi, 'set_point': np.array([0.21, 0.11]), 'action_centroid': np.array([np.maximum(2.*np.random.rand(),0.31), np.maximum(2.*np.random.rand(),0.31),np.maximum(2.*np.random.rand(),0.31),np.maximum(2.*np.random.rand(),0.31)]), 'initial_state': np.array([[0., 0.]]),'K_step': 0.3, 'comentarios': 'para el paper'},
