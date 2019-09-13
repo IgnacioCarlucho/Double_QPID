@@ -2,13 +2,13 @@
 
 The algorithm is also known as DQPID. From the article:  
 
-"Double Q-learning algorithm for mobile robot control"
+[**"Double Q-learning algorithm for mobile robot control"**](https://www.sciencedirect.com/science/article/pii/S0957417419304749)
 
-Version submitted to Expert Systems with Applications (under review).
+As appears in Expert Systems with Applications.
 
 Authors: Ignacio Carlucho - Mariano De Paula - Gerardo Acosta 
 
-
+![alt text](https://github.com/IgnacioCarlucho/Double_QPID/blob/master/Fig2.jpg)
 
 ## Requirements: 
 
