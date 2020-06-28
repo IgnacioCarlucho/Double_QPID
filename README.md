@@ -1,4 +1,4 @@
-# Duble QPID
+# Double QPID
 
 The algorithm is also known as DQPID. From the article:  
 
